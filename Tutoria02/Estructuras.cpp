@@ -17,13 +17,12 @@ void poblarArreglo(Estudiante estudiantes[3])
     {
         cout << endl << "Ingrese el carnet del estudiante: "<< endl;
         cin >> estudiantes[i].carnet;
+        cin.ignore();
 
         cout << "Ingrese el nombre del estudiante: " << endl;
         getline(cin, estudiantes[i].nombre);
         // cin --> sin espacios
         // getline(cin, estudiantes[i].nombre)
-
-        cin.ignore();
 
         cout << "Ingrese el CUM del estudiante: " << endl;
         cin >> estudiantes[i].CUM;
