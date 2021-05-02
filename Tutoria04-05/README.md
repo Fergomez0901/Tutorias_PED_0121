@@ -111,8 +111,8 @@ struct Queue
 ```cpp
 void initialize(Queue *q)
 {
-    q->frente = NULL;
-    q->final = NULL;
+    q->front = NULL;
+    q->back = NULL;
 }
 ```
 

@@ -7,7 +7,7 @@ struct Canciones
     string titulo;
     string cantante;
     string genero;
-    int duracion;
+    int duracion; // duracion en segundos
 };
 
 struct Nodo
@@ -35,7 +35,6 @@ bool empty(Cola *q)
 
 void push(Cola *q, Canciones c)
 {
-
     Nodo *aNode = new Nodo;
     aNode->element = c;
     aNode->next = NULL;
@@ -43,7 +42,8 @@ void push(Cola *q, Canciones c)
     if(q->back == NULL){
         q->front = aNode;
     }
-    else{
+    else
+    {
         (q->back)->next = aNode;
     }
     q->back = aNode;
@@ -51,7 +51,8 @@ void push(Cola *q, Canciones c)
 
 void pop(Cola *q)
 {
-    if(empty(q)){
+    if(empty(q))
+    {
         cout<<"Cola vacia!\n";
         return;
     }
@@ -65,7 +66,8 @@ void pop(Cola *q)
     delete (aNode);
 }
 
-void agregarCancion(Cola *q){
+void agregarCancion(Cola *q)
+{
     Canciones cancion;
     cout << "Ingrese el titulo de la cancion: ";
     getline(cin, cancion.titulo);
@@ -83,7 +85,8 @@ void agregarCancion(Cola *q){
     push(q, cancion);
 }
 
-void vaciarPlaylist(Cola *q){
+void vaciarPlaylist(Cola *q)
+{
     while (!empty(q)) 
     { 
         pop(q); 
@@ -93,7 +96,8 @@ void vaciarPlaylist(Cola *q){
 
 void mostrarPlaylist(Cola *q) 
 {
-    if(empty(q)){
+    if(empty(q))
+    {
         cout << "La cola esta vacia" << endl;
         return;
     } 
@@ -146,7 +150,7 @@ void mostrarMenuCanciones(Cola *q)
         cout << "----- MENU -----" << endl;
         cout << "1. Agregar nueva cancion" << endl;
         cout << "2. Eliminar cancion" << endl;
-        cout << "3. Vacia playlist" << endl;
+        cout << "3. Vaciar playlist" << endl;
         cout << "4. Mostrar playlist" << endl;
         cout << "5. Regresar" << endl;
         cin >> opcion;

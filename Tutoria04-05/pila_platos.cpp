@@ -90,7 +90,8 @@ void showStack(Stack *s)
     cout << endl;
 }
 
-void llenarPilaInicial(Stack *s){
+void llenarPilaInicial(Stack *s)
+{
     int n;
 
     cout << "Cuantos platos tiene?: "; cin >> n;
