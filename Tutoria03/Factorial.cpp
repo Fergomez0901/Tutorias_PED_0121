@@ -3,13 +3,13 @@ using namespace std;
 
 int factorial(int n)
 {
-    if(n == 0)
+    if(n == 0) // Caso base
     {
         return 1;
     }
-    else
+    else        // Caso recursivo
     {
-        return n*factorial(n-1);
+        return n * factorial(n-1);
     }
 }
 
